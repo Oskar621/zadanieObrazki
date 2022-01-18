@@ -3,6 +3,7 @@ package com.example.myapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageView
 
 class MainActivity : AppCompatActivity() {
@@ -56,5 +57,21 @@ class MainActivity : AppCompatActivity() {
             else if(liczba == 4)
                 findViewById<ImageView>(R.id.imageView).setImageResource(R.drawable.ash_noivern);
         }
+        findViewById<Button>(R.id.PochylLewo).setOnClickListener {
+
+        }
+        findViewById<Button>(R.id.PochylPrawo).setOnClickListener {
+
+        }
+        findViewById<Button>(R.id.Skala).setOnClickListener {
+            var skala = findViewById<EditText>(R.id.Dorotacji).text;
+            findViewById<ImageView>(R.id.imageView).scaleX = skala.toString().toFloat();
+            findViewById<ImageView>(R.id.imageView).scaleY = skala.toString().toFloat();
+        }
+        findViewById<Button>(R.id.Przezroczystosc).setOnClickListener {
+            var przezroczystoscskala = findViewById<EditText>(R.id.DoPrzezroczystosci).text;
+            findViewById<ImageView>(R.id.imageView).alpha = przezroczystoscskala.toString().toFloat();
+        }
+        }
     }
-}
+
