@@ -66,7 +66,8 @@ class MainActivity : AppCompatActivity() {
             findViewById<ImageView>(R.id.imageView).rotation = pochylenie.toString().toFloat();
         }
         findViewById<Button>(R.id.Skala).setOnClickListener {
-            var skala = findViewById<EditText>(R.id.Dorotacji).text;
+
+            var skala = findViewById<EditText>(R.id.DoSkali).text;
             findViewById<ImageView>(R.id.imageView).scaleX = skala.toString().toFloat();
             findViewById<ImageView>(R.id.imageView).scaleY = skala.toString().toFloat();
         }
