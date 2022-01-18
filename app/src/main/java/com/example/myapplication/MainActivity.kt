@@ -58,10 +58,12 @@ class MainActivity : AppCompatActivity() {
                 findViewById<ImageView>(R.id.imageView).setImageResource(R.drawable.ash_noivern);
         }
         findViewById<Button>(R.id.PochylLewo).setOnClickListener {
-
+            var pochylenie = findViewById<EditText>(R.id.Dorotacji).text
+            findViewById<ImageView>(R.id.imageView).rotation = pochylenie.toString().toFloat();
         }
         findViewById<Button>(R.id.PochylPrawo).setOnClickListener {
-
+            var pochylenie = "-" + findViewById<EditText>(R.id.Dorotacji).text
+            findViewById<ImageView>(R.id.imageView).rotation = pochylenie.toString().toFloat();
         }
         findViewById<Button>(R.id.Skala).setOnClickListener {
             var skala = findViewById<EditText>(R.id.Dorotacji).text;
